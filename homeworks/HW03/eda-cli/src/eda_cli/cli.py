@@ -107,9 +107,8 @@ def report(
     # 4. Markdown-отчёт
     md_path = out_root / "report.md"
     with md_path.open("w", encoding="utf-8") as f:
-        f.write(f"# EDA-отчёт\n\n")
         # добавление title
-        f.write(f"# {title}\n\n")
+        f.write(f"# EDA-отчёт : {title}\n\n")
         f.write(f"Исходный файл: `{Path(path).name}`\n\n")
         f.write(f"Строк: **{summary.n_rows}**, столбцов: **{summary.n_cols}**\n\n")
         # добавление настроек отчёта
@@ -120,7 +119,13 @@ def report(
         f.write(f"- Макс. доля пропусков по колонке: **{quality_flags['max_missing_share']:.2%}**\n")
         f.write(f"- Слишком мало строк: **{quality_flags['too_few_rows']}**\n")
         f.write(f"- Слишком много колонок: **{quality_flags['too_many_columns']}**\n")
-        f.write(f"- Слишком много пропусков: **{quality_flags['too_many_missing']}**\n\n")
+        f.write(f"- Слишком много пропусков: **{quality_flags['too_many_missing']}**\n")
+        # Новые эвристики
+        f.write(f"- Есть константные колонки (все значения одинаковы): **{quality_flags['has_constant_columns']}**\n")
+        f.write(f"- Есть категориальные признаки с высокой кардинальностью: **{quality_flags['has_high_cardinality_categoricals']}**\n")
+        f.write(f"- Подозрение на дубликаты в ID-колонках: **{quality_flags['has_suspicious_id_duplicates']}**\n")
+        f.write(f"- Колонки с большим числом нулевых значений: **{', '.join(quality_flags['zero_value_columns']) if quality_flags['zero_value_columns'] else 'нет'}**\n")
+        f.write(f"- Есть числовые колонки с избыточным количеством нулей: **{quality_flags['has_many_zero_values']}**\n\n")
 
         f.write("## Колонки\n\n")
         f.write("См. файл `summary.csv`.\n\n")
@@ -146,8 +151,6 @@ def report(
         if not top_cats:
             f.write("Категориальные/строковые признаки не найдены.\n\n")
         else:
-            f.write("См. файлы в папке `top_categories/`.\n\n")
-
             #f.write("См. файлы в папке `top_categories/`.\n\n") изменил с отображением top-k
             f.write(f"Показаны top-{top_k_categories} значений. См. файлы в папке `top_categories/`.\n\n")
 
