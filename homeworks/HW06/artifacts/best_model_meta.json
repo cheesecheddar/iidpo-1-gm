@@ -1,0 +1,14 @@
+{
+  "model_name": "GradientBoosting",
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 7,
+    "n_estimators": 150
+  },
+  "test_metrics": {
+    "accuracy": 0.9353333333333333,
+    "f1": 0.8961456102783726,
+    "auc": 0.9746087044842823
+  },
+  "cv_score": 0.9715540046011357
+}
