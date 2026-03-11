@@ -55,3 +55,7 @@ logs/
 *.tmp
 *.bak
 *.old
+
+# Специфические файлы (личные заметки, некторые бд)
+homeworks/HW08-09/minds
+homeworks/HW08-09/data

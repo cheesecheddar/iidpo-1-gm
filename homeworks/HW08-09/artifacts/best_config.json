@@ -1,0 +1,30 @@
+{
+  "experiment": "E4",
+  "dataset": "EMNIST Balanced",
+  "seed": 42,
+  "architecture": {
+    "type": "MLP",
+    "input_dim": 784,
+    "hidden_sizes": [
+      512,
+      256
+    ],
+    "activation": "ReLU",
+    "dropout_p": 0.0,
+    "use_batchnorm": true,
+    "num_classes": 47
+  },
+  "training": {
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "batch_size": 128,
+    "max_epochs": 30,
+    "early_stopping_patience": 5,
+    "epochs_trained": 15
+  },
+  "results": {
+    "best_val_accuracy": 0.851,
+    "test_accuracy": 0.847,
+    "test_loss": 0.4961
+  }
+}
