@@ -1,0 +1,14 @@
+{
+  "dataset": "STL10",
+  "seed": 42,
+  "chosen_experiment": "C4",
+  "architecture": "ResNet18",
+  "transforms": "resnet_weights_transforms",
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "epochs_trained": 3,
+  "best_val_accuracy": 0.945,
+  "best_val_loss": 0.21103191262483598,
+  "test_accuracy": 0.94425,
+  "test_loss": 0.18470943701267242
+}

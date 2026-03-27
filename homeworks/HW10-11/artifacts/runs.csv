@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,SimpleCNN,Adam,0.001,5,0.325,,,,,
+C2,classification,STL10,42,SimpleCNN,Adam,0.001,5,0.307,,,,,same_cnn_as_C1_with_augmentations
+C3,classification,STL10,42,ResNet,Adam,0.001,3,0.934,,,,,resnet18_pretrained_head_only
+C4,classification,STL10,42,ResNet,Adam,0.0001,3,0.945,0.94425,,,,resnet18_pretrained_partial_finetune_layer4_fc
+V1,segmentation,OxfordIIITPet,42,DeepLabV3_ResNet50 pretrained,,,0,,,0.7877880790681452,0.970135093378866,0.7679618687265757,"threshold=0.50, basic postprocessing"
+V2,segmentation,OxfordIIITPet,42,DeepLabV3_ResNet50 pretrained,,,0,,,0.8057804849554685,0.939942758300294,0.7655487070401449,threshold=0.60 + morphological cleanup
