@@ -5,6 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.13.0",
+    "datasets>=4.8.4",
     "jupyter>=1.1.1",
     "matplotlib>=3.10.8",
     "numpy>=2.4.3",
@@ -12,4 +14,5 @@ dependencies = [
     "scikit-learn>=1.8.0",
     "torch>=2.10.0",
     "torchvision>=0.25.0",
+    "transformers>=5.5.0",
 ]
