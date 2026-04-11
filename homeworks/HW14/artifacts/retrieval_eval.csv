@@ -1,0 +1,11 @@
+query,expected_docs,retrieved_docs,hit_at_3,recall_at_3,mrr_at_3
+government regulation technology,1,"4,8,5",0,0.0,0.0
+Silicon Valley innovation startups,2,"2,7,2",1,1.0,1.0
+data protection privacy GDPR,3,"5,9,11",0,0.0,0.0
+robotics automation manufacturing,4,"4,9,9",1,1.0,1.0
+software development IT services,5,"2,4,2",0,0.0,0.0
+AI research universities funding,6,"7,7,2",0,0.0,0.0
+cybersecurity infrastructure protection,7,"4,9,5",0,0.0,0.0
+regulatory compliance platforms,8,"2,9,8",1,1.0,0.3333333333333333
+fintech investment startups,9,"7,2,7",0,0.0,0.0
+semiconductor manufacturing display,10,"6,11,8",0,0.0,0.0
