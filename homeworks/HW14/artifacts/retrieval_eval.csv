@@ -1,4 +1,4 @@
-query,expected_docs,retrieved_docs,hit_at_3,recall_at_3,mrr_at_3
+query,expected_source,retrieved_sources,hit_at_k,recall_at_k,mrr_at_k
 government regulation technology,1,"4,8,5",0,0.0,0.0
 Silicon Valley innovation startups,2,"2,7,2",1,1.0,1.0
 data protection privacy GDPR,3,"5,9,11",0,0.0,0.0
